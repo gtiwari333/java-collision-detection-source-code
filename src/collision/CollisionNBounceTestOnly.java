@@ -68,7 +68,6 @@ class CollisionNBounceTestOnly extends JPanel {
 
     /**
      * detects collision, bounces, calculate final velocities
-     *
      */
     private void gameUpdate() {
         // Check collision between the balls and the box
