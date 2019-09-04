@@ -4,10 +4,10 @@ import java.awt.*;
 
 class PhysicsUtils {
     public static void collisionWithWall(Rectangle wall, Ball ball) {
-        float ballMinX = wall.x + ball.radius;
-        float ballMinY = wall.y + ball.radius;
-        float ballMaxX = wall.width - ball.radius;
-        float ballMaxY = wall.height - ball.radius;
+        double ballMinX = wall.x + ball.radius;
+        double ballMinY = wall.y + ball.radius;
+        double ballMaxX = wall.width - ball.radius;
+        double ballMaxY = wall.height - ball.radius;
         if (ball.x < ballMinX) {
             ball.speedX = -ball.speedX; // Reflect along normal
             ball.x = ballMinX; // Re-position the ball at the edge

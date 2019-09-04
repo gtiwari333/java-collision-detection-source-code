@@ -3,21 +3,21 @@ package collision;
 import java.awt.*;
 
 class Ball {
-    float x, y; // collision.Ball's center x and y
-    float speedX, speedY; // collision.Ball's speed per step in x and y
-    final float radius; // collision.Ball's radius
+    double x, y; // collision.Ball's center x and y
+    double speedX, speedY; // collision.Ball's speed per step in x and y
+    final double radius; // collision.Ball's radius
     private final Color color; // collision.Ball's color
 
-    public Ball(float x, float y, float radius, float speed, float angleInDegree, Color color) {
+    public Ball(double x, double y, double radius, double speed, double angleInDegree, Color color) {
         this.x = x;
         this.y = y;
-        this.speedX = (float) (speed * Math.cos(Math.toRadians(angleInDegree)));
-        this.speedY = -speed * (float) Math.sin(Math.toRadians(angleInDegree));
+        this.speedX = speed * Math.cos(Math.toRadians(angleInDegree));
+        this.speedY = -speed * Math.sin(Math.toRadians(angleInDegree));
         this.radius = radius;
         this.color = color;
     }
 
-    public void update(float incr) {
+    public void update(double incr) {
         this.x += this.speedX * incr;
         this.y += this.speedY * incr;
     }
@@ -33,7 +33,7 @@ class Ball {
     /**
      * Return mass
      */
-    public float getMass() {
+    public double getMass() {
         return 2 * radius * radius * radius / 1000f;
     }
 
